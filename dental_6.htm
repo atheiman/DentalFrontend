@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--
+	
+---------------------------------------------------------------------
+	README
+This is the final model of the Dentodyne software application. This
+model was created by VCS in an attempt to visualize a user interface
+for the upcoming application Dentodyne. The software is designed for
+Wamego Dental hygienists who have requested a more responsive and
+intuitive hygienist software solution.
+
+The application will take in Appointment Info from an appointment
+database, and display relevant information. The hygienists will be
+able to launch an appointment, update medical history, input
+clinical notes per appointment, manage periodontal charts, and view
+X-Ray images captured via USB.
+
+Note that this is only a model and is not meant to be a functioning
+application. This model will be converted to the chosen language
+when the model has been approved.
+---------------------------------------------------------------------
+
+-->
+
+<html>
+<head>
+	<!--External Style Sheet-->
+	<link rel="stylesheet" type="text/css" href="dental_6.css">
+	<!--External JavaScript-->
+	<script src="dental_6.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title>VCS Dentodyne</title>
+</head>
+
+<body>
+
+<div id='page'>
+
+<div id='logo_and_tabs'>
+
+	<span id='logo'>
+		<img id="logo_img" src="images/logo.jpg" alt="VCS Logo" width=''>
+	</span> <!--end logo-->
+	
+	<span id='tabs_container'>
+		<span id="app_inf_tab" class="tab" onmouseover='mOverTab(this)'
+		onmouseout='mOutTab(this)' onclick='mClickTab(this)'>
+		Appointment Info
+		</span>
+		<span id="med_his_tab" class="tab" onmouseover='mOverTab(this)'
+		onmouseout='mOutTab(this)' onclick='mClickTab(this)'>
+		Medical History
+		</span>
+		<span id="cli_not_tab" class="tab" onmouseover='mOverTab(this)'
+		onmouseout='mOutTab(this)' onclick='mClickTab(this)'>
+		Clinical Notes
+		</span>
+		<span id="per_cha_tab" class="tab" onmouseover='mOverTab(this)'
+		onmouseout='mOutTab(this)' onclick='mClickTab(this)'>
+		Periodontal Chart
+		</span>
+		<span id="x_ray_tab" class="tab" onmouseover='mOverTab(this)'
+		onmouseout='mOutTab(this)' onclick='mClickTab(this)'>
+		X-Ray Imaging
+		</span>
+	</span> <!--end tabs-->
+	
+</div> <!--end logo_and_tabs-->
+
+<div id='navbar_and_content'>
+	
+	<span id='navbar'>
+    	<div id="day_0" class="day">
+            TODAY
+            <div id="day_0_operatory_1" class="operatory">
+                Operatory 1
+                <div id="day_0_operatory_1_appt_1" class="appt">
+                    appt 1 today
+                </div>
+                <div id="day_0_operatory_1_appt_2" class="appt">
+                    appt 2 today
+                </div>
+                <div id="day_0_operatory_1_appt_3" class="appt">
+                    appt 3 today
+                </div>
+                <div id="day_0_operatory_1_appt_4" class="appt">
+                    appt 4 today
+                </div>
+                <div id="day_0_operatory_1_appt_5" class="appt">
+                    appt 5 today
+                </div>
+            </div>
+            <div id="day_0_operatory_2" class="operatory">
+                Operatory 2
+                <div id="day_0_operatory_2_appt_1" class="appt">
+                    appt 1 today
+                </div>
+                <div id="day_0_operatory_2_appt_2" class="appt">
+                    appt 2 today
+                </div>
+                <div id="day_0_operatory_2_appt_3" class="appt">
+                    appt 3 today
+                </div>
+                <div id="day_0_operatory_2_appt_4" class="appt">
+                    appt 4 today
+                </div>
+                <div id="day_0_operatory_2_appt_5" class="appt">
+                    appt 5 today
+                </div>
+            </div>
+            <div id="day_0_operatory_3" class="operatory">
+                Operatory 3
+                <div id="day_0_operatory_3_appt_1" class="appt">
+                    appt 1 today
+                </div>
+                <div id="day_0_operatory_3_appt_2" class="appt">
+                    appt 2 today
+                </div>
+                <div id="day_0_operatory_3_appt_3" class="appt">
+                    appt 3 today
+                </div>
+                <div id="day_0_operatory_3_appt_4" class="appt">
+                    appt 4 today
+                </div>
+                <div id="day_0_operatory_3_appt_5" class="appt">
+                    appt 5 today
+                </div>
+            </div>
+            <div id="day_0_operatory_4" class="operatory">
+                Operatory 4
+                <div id="day_0_operatory_4_appt_1" class="appt">
+                    appt 1 today
+                </div>
+                <div id="day_0_operatory_4_appt_2" class="appt">
+                    appt 2 today
+                </div>
+                <div id="day_0_operatory_4_appt_3" class="appt">
+                    appt 3 today
+                </div>
+                <div id="day_0_operatory_4_appt_4" class="appt">
+                    appt 4 today
+                </div>
+                <div id="day_0_operatory_4_appt_5" class="appt">
+                    appt 5 today
+                </div>
+            </div>
+        </div>
+        
+    	<div id="day_1" class="day">
+            TOMORROW
+            <div id="day_1_operatory_1" class="operatory">
+                Operatory 1
+                <div id="day_1_operatory_1_appt_1" class="appt">
+                    appt 1 tomorrow
+                </div>
+                <div id="day_1_operatory_1_appt_2" class="appt">
+                    appt 2 tomorrow
+                </div>
+                <div id="day_1_operatory_1_appt_3" class="appt">
+                    appt 3 tomorrow
+                </div>
+                <div id="day_1_operatory_1_appt_4" class="appt">
+                    appt 4 tomorrow
+                </div>
+                <div id="day_1_operatory_1_appt_5" class="appt">
+                    appt 5 tomorrow
+                </div>
+            </div>
+            <div id="day_1_operatory_2" class="operatory">
+                Operatory 2
+                <div id="day_1_operatory_2_appt_1" class="appt">
+                    appt 1 tomorrow
+                </div>
+                <div id="day_1_operatory_2_appt_2" class="appt">
+                    appt 2 tomorrow
+                </div>
+                <div id="day_1_operatory_2_appt_3" class="appt">
+                    appt 3 tomorrow
+                </div>
+                <div id="day_1_operatory_2_appt_4" class="appt">
+                    appt 4 tomorrow
+                </div>
+                <div id="day_1_operatory_2_appt_5" class="appt">
+                    appt 5 tomorrow
+                </div>
+            </div>
+            <div id="day_1_operatory_3" class="operatory">
+                Operatory 3
+                <div id="day_1_operatory_3_appt_1" class="appt">
+                    appt 1 tomorrow
+                </div>
+                <div id="day_1_operatory_3_appt_2" class="appt">
+                    appt 2 tomorrow
+                </div>
+                <div id="day_1_operatory_3_appt_3" class="appt">
+                    appt 3 tomorrow
+                </div>
+                <div id="day_1_operatory_3_appt_4" class="appt">
+                    appt 4 tomorrow
+                </div>
+                <div id="day_1_operatory_3_appt_5" class="appt">
+                    appt 5 tomorrow
+                </div>
+            </div>
+            <div id="day_1_operatory_4" class="operatory">
+                Operatory 4
+                <div id="day_1_operatory_4_appt_1" class="appt">
+                    appt 1 tomorrow
+                </div>
+                <div id="day_1_operatory_4_appt_2" class="appt">
+                    appt 2 tomorrow
+                </div>
+                <div id="day_1_operatory_4_appt_3" class="appt">
+                    appt 3 tomorrow
+                </div>
+                <div id="day_1_operatory_4_appt_4" class="appt">
+                    appt 4 tomorrow
+                </div>
+                <div id="day_1_operatory_4_appt_5" class="appt">
+                    appt 5 tomorrow
+                </div>
+            </div>
+        </div>
+        
+    	<div id="day_2" class="day">
+            THE NEXT DAY
+            <div id="day_2_operatory_1" class="operatory">
+                Operatory 1
+                <div id="day_2_operatory_1_appt_1" class="appt">
+                    appt 1 next day
+                </div>
+                <div id="day_2_operatory_1_appt_2" class="appt">
+                    appt 2 next day
+                </div>
+                <div id="day_2_operatory_1_appt_3" class="appt">
+                    appt 3 next day
+                </div>
+                <div id="day_2_operatory_1_appt_4" class="appt">
+                    appt 4 next day
+                </div>
+                <div id="day_2_operatory_1_appt_5" class="appt">
+                    appt 5 next day
+                </div>
+            </div>
+            <div id="day_2_operatory_2" class="operatory">
+                Operatory 2
+                <div id="day_2_operatory_2_appt_1" class="appt">
+                    appt 1 next day
+                </div>
+                <div id="day_2_operatory_2_appt_2" class="appt">
+                    appt 2 next day
+                </div>
+                <div id="day_2_operatory_2_appt_3" class="appt">
+                    appt 3 next day
+                </div>
+                <div id="day_2_operatory_2_appt_4" class="appt">
+                    appt 4 next day
+                </div>
+                <div id="day_2_operatory_2_appt_5" class="appt">
+                    appt 5 next day
+                </div>
+            </div>
+            <div id="day_2_operatory_3" class="operatory">
+                Operatory 3
+                <div id="day_2_operatory_3_appt_1" class="appt">
+                    appt 1 next day
+                </div>
+                <div id="day_2_operatory_3_appt_2" class="appt">
+                    appt 2 next day
+                </div>
+                <div id="day_2_operatory_3_appt_3" class="appt">
+                    appt 3 next day
+                </div>
+                <div id="day_2_operatory_3_appt_4" class="appt">
+                    appt 4 next day
+                </div>
+                <div id="day_2_operatory_3_appt_5" class="appt">
+                    appt 5 next day
+                </div>
+            </div>
+            <div id="day_2_operatory_4" class="operatory">
+                Operatory 4
+                <div id="day_2_operatory_4_appt_1" class="appt">
+                    appt 1 next day
+                </div>
+                <div id="day_2_operatory_4_appt_2" class="appt">
+                    appt 2 next day
+                </div>
+                <div id="day_2_operatory_4_appt_3" class="appt">
+                    appt 3 next day
+                </div>
+                <div id="day_2_operatory_4_appt_4" class="appt">
+                    appt 4 next day
+                </div>
+                <div id="day_2_operatory_4_appt_5" class="appt">
+                    appt 5 next day
+                </div>
+            </div>
+        </div>
+	</span> <!--end navbar-->
+	
+	<span id='content'>
+		<h2>Content</h2>
+	</span>
+	
+</div> <!--end navbar_and_content-->
+
+<div id=footer>
+This is an HTML model produced by VCS for visualizing the soon to be released Dentodyne software. When a parent object in the left navbar is clicked, the child objects will expand / collapse. When an appt is clicked, the Appointment Info tab will display with relevant information. The hygienist may click through each tab freely, and make changes to the fields. &nbsp <a href='documentation.html' target='blank'>Click here for further documentation.</a> &nbsp <a href="mailto:atheiman@ksu.edu?Subject=DentoDyne%20Feedback" target="_top">Click here to send feedback.</a>
+</div> <!--end footer-->
+
+</div> <!--end page-->
+
+<!-- On load complete execute JavaScript Click Education -->
+
+<body onload="mClickTab(app_inf_tab)">
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

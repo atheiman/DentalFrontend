@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+	
+---------------------------------------------------------------------
+	README
+This is the final model of the Dentodyne software application. This
+model was created by VCS in an attempt to visualize a user interface
+for the upcoming application Dentodyne. The software is designed for
+Wamego Dental hygienists who have requested a more responsive and
+intuitive hygienist software solution.
+
+The application will take in Appointment Info from an appointment
+database, and display relevant information. The hygienists will be
+able to launch an appointment, update medical history, input
+clinical notes per appointment, manage periodontal charts, and view
+X-Ray images captured via USB.
+
+Note that this is only a model and is not meant to be a functioning
+application. This model will be converted to the chosen language
+when the model has been approved.
+---------------------------------------------------------------------
+
+-->
+
+<html>
+<head>
+	<!--External Style Sheet-->
+	<link rel="stylesheet" type="text/css" href="documentation_style.css">
+    <title>VCS Dentodyne Documentation</title>
+</head>
+
+<body>
+
+<h2>Venomous Commando Squad</h2>
+<h1>DentoDyne Software Package</h1>
+
+<h3>Introduction</h3>
+<p>This HTML model was created by VCS for Wamego Dental Offices.
+Austin Heiman, Isaac Dressman, Matt Hughes, Cody Moreland, and Alex Baker.
+The purpose of this page is to explain the functionality that will be built behind this GUI.
+The documentation is broken down by use case, with each use case having a corresponding tab.
+The main structure of the GUI is broken down into just a few parts:
+<ul><li>Tabs at the top of the page used for navigation</li>
+<li>Appointment Navbar to the left</li>
+<li>The main content section to the right</li></ul></p>
+
+<h3>Select an Appointment</h3>
+<p>The first step of using VCS Dentodyne is to select an appointment from the navigation bar at left.
+The software package is centered around the core class of the appointment.
+Everything is appointment driven.
+The appointments listed to the left will contain a brief summary of the appt using information pulled from the appointment database.
+Appointments are classified out by when they occur and which operatory is responsible for them.
+The categorization of appts is broken down first by date, then by operatory, then finally ordered by time of appt.
+Upon selecting an appointment, the application will bring the user to the Appointment Info Tab and the fields will be filled in with relevant information about the appointment and patient from the appointment database.</p>
+
+<h3>Appointment Info</h3>
+<p>The information contained under this tab includes simple patient data such as name, date of birth, and SSN.
+This information will be automatically populated when an appointment is selected.
+At the right, the appointment type is displayed as well as the patient's last visit and whether or not they have requested fluoride for this visit.
+Any of this information can be updated by the hygienist by editing the field and clicking 'Update'.</p>
+
+<h3>Medical History</h3>
+<p>The Medical History tab contains much more information about the patient.
+This is the only information contained in the DentoDyne software package that is not appointment driven.
+The medical history information of a patient may change over time, and for this reason the information can be updated by editing the field and clicking "Update'.</p>
+
+<h3>Clinical Notes</h3>
+<p>This section contains two columns.
+At left is the clinical notes already recorded during previous appointments.
+The hygienist can view any notes taken in the past concerning a patient.
+By selecting an appointment date from the drop-down list, the user, can view clinical notes from any previous appt.
+The user may also input notes from today's appointment by editing the textarea at right and clicking 'Update'.</p>
+
+<h3>Periodontal Chart</h3>
+<p>The Periodontal Chart tab contains a series of fields for the hygienist to input periodontal readings into.
+The fields accept any 1 or 2 digit number and the user can advance to the next field using the tab key.
+Wamego Dental has requested that the cursor automatically advance to the next field after a reading has been recorded.
+This feature will be added in the next release.
+Once all the necessary fields are completed, the hygienist needs to click the 'Update' button to submit changes.
+The link in this tab opens up a periodontal chart image for reference.</p>
+
+<h3>X-Ray Imaging</h3>
+<p>The X-Ray Imaging tab is quite a powerful tool for the user.
+The hygienist snaps X-Rays using the appropriate hardware, and the 4 shots will be displayed in the pane at the bottom.
+When the user clicks on the thumbnail, the display box will display a larger version of the X-Ray.
+In future releases, the user will be able to zoom into the picture and highlight important areas.</p>
+
+<h3>Other Notes</h3>
+<p>In the footer at the bottom of the application there is a mailto link for sending feedback to the VCS development team.
+Feedback is greatly appreciated!
+Many pieces of this application are under development.
+This is not meant to be a working application, merely a model to demonstrate the use of the software.
+This model was created using HTML CSS and JavaScript, but the full installation will be developed using .NET technology.
+An important feature of any application is validation.
+Many of the fields in this application use basic validation methods to ensure accurate data is retained.</p>
+</body></html>
